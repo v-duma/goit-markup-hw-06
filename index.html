@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +17,7 @@
 <body>
   <header class="header">
     <div class="div-header container">
-      <nav class="nav">
+      <nav class="list nav">
         <a href="" class="logo link">Web<span class="span-studio-header">Studio</span></a>
         <ul class="list navigation">
           <li>
@@ -38,6 +39,15 @@
           </li>
         </ul>
       </address>
+
+      <div class="div-menu">
+        <button class="btn-menu button menu-toggle js-open-menu" type="button" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg class="menu-icon icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
   <main>
@@ -113,11 +123,13 @@
 
     <!-- секція 3 -->
     <section class="section section-three">
-      <div class="container">
+      <div class="container list">
         <h2 class="h-section-thee">What are we doing</h2>
         <ul class="list img-list-index list-sec-two">
           <li class="img-list-index-li">
             <img src="./images/img1.jpg" width="360" height="300" alt="Computer" />
+
+            <img srcset="./img/photo.jpg 1x, ./img/photo@2x.jpg 2x" src="./img/photo.jpg" alt="Computer" />
           </li>
           <li class="img-list-index-li">
             <img src="./images/img2.jpg" width="360" height="300" alt="Messenger" />
@@ -133,7 +145,7 @@
     <section class="section section-four">
       <div class="container">
         <h2 class="h-section-thee">Our Team</h2>
-        <ul class="list four-sec-list list-sec-two">
+        <ul class="list four-sec-list">
           <li class="sec-four-li">
             <img src="./images/img4.jpg" width="264" height="260" alt="Mark Guerrero" />
             <div class="div-four-sec-list">
@@ -168,7 +180,7 @@
             </div>
           </li>
           <li class="sec-four-li">
-            <img src="./images/img5.jpg" width="264" height="260" alt="Tom Ford" />
+            <img src="./images/img7.jpg" width="264" height="260" alt="Tom Ford" />
             <div class="div-four-sec-list">
               <h3 class="sec-h-three-team">Tom Ford</h3>
               <p class="sec-p-team">Frontend Developer</p>
@@ -234,7 +246,7 @@
             </div>
           </li>
           <li class="sec-four-li">
-            <img src="./images/img7.jpg" width="264" height="260" alt="Daniel Wilson" />
+            <img src="./images/img5.jpg" width="264" height="260" alt="Daniel Wilson" />
             <div class="div-four-sec-list">
               <h3 class="sec-h-three-team">Daniel Wilson</h3>
               <p class="sec-p-team">UI Designer</p>
@@ -442,7 +454,76 @@
     </div>
   </div>
 
+
+
+  <div class="menu-div js-menu-container" id="mobile-menu">
+    <button type="button" data-modal-close class="modal-button-close js-close-menu">
+      <svg width="8" height="8" class="modal-close-svg">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <div class="contacts-div">
+      <nav class="mobile-nav">
+        <ul class="mobile-menu-ul list">
+          <li class="mobile-menu-li current">
+            <a href="./index.html" class="link link-menu-mobile current">Studio</a>
+          </li>
+          <li class="mobile-menu-li">
+            <a href="./portfolio.html" class="link link-menu-mobile">Portfolio</a>
+          </li>
+          <li class="mobile-menu-li">
+            <a href="" class="link link-menu-mobile">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-contacts">
+        <address class="mobile-address">
+          <ul class="list adress-ul-mob">
+            <li class="mobile-tel">
+              <a href="tel:+110001111111" class="link mobile-tel">+11 (000) 111-11-11</a>
+            </li>
+            <li class="mobile-email">
+              <a href="mailto:info@devstudio.com" class="link mobile-email">info@devstudio.com</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="mobile-contact-pic">
+        <ul class="icon-ul-mob list">
+          <li class="icon-li-mob">
+            <a class="icons-sec-four-a" href="">
+              <svg class="icons-sec-four-svg icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-li-mob">
+            <a class="icons-sec-four-a" href="">
+              <svg class="icons-sec-four-svg icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-li-mob">
+            <a class="icons-sec-four-a" href="">
+              <svg class="icons-sec-four-svg icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon-li-mob">
+            <a class="icons-sec-four-a" href="">
+              <svg class="icons-sec-four-svg icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
