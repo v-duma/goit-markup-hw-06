@@ -929,6 +929,7 @@ max-width: 584px;
   .footer-div {
     display: flex;
     gap: 0;
+    flex-wrap: nowrap;
   }
 
   .div-logo-footer {
